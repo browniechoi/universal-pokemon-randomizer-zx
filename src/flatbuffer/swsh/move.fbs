@@ -1,0 +1,57 @@
+namespace com.dabomstew.pkrandom.generated.swsh;
+
+table SwShMove {
+    version:uint;
+    move_id:uint;
+    can_use_move:bool;
+    type:byte;
+    quality:byte;
+    category:byte;
+    power:byte;
+    accuracy:byte;
+    pp:byte;
+    priority:byte;
+    hit_min:byte;
+    hit_max:byte;
+    inflict:ushort;
+    inflict_percent:byte;
+    raw_inflict_count:byte;
+    turn_min:byte;
+    turn_max:byte;
+    crit_stage:byte;
+    flinch:byte;
+    effect_sequence:ushort;
+    recoil:byte;
+    raw_healing:byte;
+    raw_target:byte;
+    stat1:byte;
+    stat2:byte;
+    stat3:byte;
+    stat1_stage:byte;
+    stat2_stage:byte;
+    stat3_stage:byte;
+    stat1_percent:byte;
+    stat2_percent:byte;
+    stat3_percent:byte;
+    gigantamax_power:byte;
+    flag_makes_contact:bool;
+    flag_charge:bool;
+    flag_recharge:bool;
+    flag_protect:bool;
+    flag_reflectable:bool;
+    flag_snatch:bool;
+    flag_mirror:bool;
+    flag_punch:bool;
+    flag_sound:bool;
+    flag_gravity:bool;
+    flag_defrost:bool;
+    flag_distance_triple:bool;
+    flag_heal:bool;
+    flag_ignore_substitute:bool;
+    flag_fail_sky_battle:bool;
+    flag_animate_ally:bool;
+    flag_metronome:bool;
+    flag_dance:bool;
+}
+
+root_type SwShMove;
