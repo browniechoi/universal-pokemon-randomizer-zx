@@ -1,0 +1,25 @@
+namespace com.dabomstew.pkrandom.generated.swsh;
+
+table SwShWildEncounterArchive {
+    field_00:uint;
+    encounter_tables:[SwShWildEncounterTable];
+}
+
+table SwShWildEncounterTable {
+    zone_id:ulong;
+    sub_tables:[SwShWildEncounterSubTable];
+}
+
+table SwShWildEncounterSubTable {
+    level_min:ubyte;
+    level_max:ubyte;
+    slots:[SwShWildEncounterSlot];
+}
+
+table SwShWildEncounterSlot {
+    probability:ubyte;
+    species:int;
+    form:ubyte;
+}
+
+root_type SwShWildEncounterArchive;

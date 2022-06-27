@@ -1,0 +1,65 @@
+namespace com.dabomstew.pkrandom.generated.swsh;
+
+enum SwShScenario : int {
+    None = 0,
+    Legendary_Pokemon,
+    _2,
+    _3,
+    Eternatus,
+    Eternamax_Eternatus_1,
+    Eternamax_Eternatus_2,
+    Zacian_Zamazenta_Fog,
+    Motostoke_Gym_Challenge,
+    Max_Raid_Battle_1,
+    Max_Raid_Battle_2,
+    Max_Raid_Battle_3,
+    Max_Raid_Battle_4,
+    Zacian_Zamazenta_Boss,
+    Fast_Slowpoke,
+    Regigigas_Raid_Battle,
+    Special_Raid_Battle,
+    Calyrex,
+    Glastrier_Spectrier,
+    Calyrex_Fusion,
+}
+
+table SwShStaticEncounterArchive {
+    static_encounters:[SwShStaticEncounter];
+}
+
+table SwShStaticEncounter {
+    background_far_type_id:ulong;
+    background_near_type_id:ulong;
+    ev_spe:ubyte;
+    ev_atk:ubyte;
+    ev_def:ubyte;
+    ev_hp:ubyte;
+    ev_spa:ubyte;
+    ev_spd:ubyte;
+    form:ubyte;
+    dynamax_level:ubyte;
+    field_0a:int;
+    encounter_id:ulong;
+    field_0c:ubyte;
+    can_gigantamax:bool;
+    held_item:int;
+    level:ubyte;
+    encounter_scenario:SwShScenario;
+    species:int;
+    shiny_lock:uint;
+    nature:uint;
+    gender:ubyte;
+    iv_spe:byte;
+    iv_atk:byte;
+    iv_def:byte;
+    iv_hp:byte;
+    iv_spa:byte;
+    iv_spd:byte;
+    ability:int;
+    move0:int;
+    move1:int;
+    move2:int;
+    move3:int;
+}
+
+root_type SwShStaticEncounterArchive;
