@@ -18,36 +18,36 @@ public final class SwShMove extends Table {
   public long version() { int o = __offset(4); return o != 0 ? (long)bb.getInt(o + bb_pos) & 0xFFFFFFFFL : 0L; }
   public long moveId() { int o = __offset(6); return o != 0 ? (long)bb.getInt(o + bb_pos) & 0xFFFFFFFFL : 0L; }
   public boolean canUseMove() { int o = __offset(8); return o != 0 ? 0!=bb.get(o + bb_pos) : false; }
-  public byte type() { int o = __offset(10); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte quality() { int o = __offset(12); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte category() { int o = __offset(14); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte power() { int o = __offset(16); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte accuracy() { int o = __offset(18); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte pp() { int o = __offset(20); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte priority() { int o = __offset(22); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte hitMin() { int o = __offset(24); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte hitMax() { int o = __offset(26); return o != 0 ? bb.get(o + bb_pos) : 0; }
+  public int type() { int o = __offset(10); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int quality() { int o = __offset(12); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int category() { int o = __offset(14); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int power() { int o = __offset(16); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int accuracy() { int o = __offset(18); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int pp() { int o = __offset(20); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int priority() { int o = __offset(22); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int hitMin() { int o = __offset(24); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int hitMax() { int o = __offset(26); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
   public int inflict() { int o = __offset(28); return o != 0 ? bb.getShort(o + bb_pos) & 0xFFFF : 0; }
-  public byte inflictPercent() { int o = __offset(30); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte rawInflictCount() { int o = __offset(32); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte turnMin() { int o = __offset(34); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte turnMax() { int o = __offset(36); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte critStage() { int o = __offset(38); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte flinch() { int o = __offset(40); return o != 0 ? bb.get(o + bb_pos) : 0; }
+  public int inflictPercent() { int o = __offset(30); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int rawInflictCount() { int o = __offset(32); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int turnMin() { int o = __offset(34); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int turnMax() { int o = __offset(36); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int critStage() { int o = __offset(38); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int flinch() { int o = __offset(40); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
   public int effectSequence() { int o = __offset(42); return o != 0 ? bb.getShort(o + bb_pos) & 0xFFFF : 0; }
-  public byte recoil() { int o = __offset(44); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte rawHealing() { int o = __offset(46); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte rawTarget() { int o = __offset(48); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat1() { int o = __offset(50); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat2() { int o = __offset(52); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat3() { int o = __offset(54); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat1Stage() { int o = __offset(56); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat2Stage() { int o = __offset(58); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat3Stage() { int o = __offset(60); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat1Percent() { int o = __offset(62); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat2Percent() { int o = __offset(64); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte stat3Percent() { int o = __offset(66); return o != 0 ? bb.get(o + bb_pos) : 0; }
-  public byte gigantamaxPower() { int o = __offset(68); return o != 0 ? bb.get(o + bb_pos) : 0; }
+  public int recoil() { int o = __offset(44); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int rawHealing() { int o = __offset(46); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int rawTarget() { int o = __offset(48); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat1() { int o = __offset(50); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat2() { int o = __offset(52); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat3() { int o = __offset(54); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat1Stage() { int o = __offset(56); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat2Stage() { int o = __offset(58); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat3Stage() { int o = __offset(60); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat1Percent() { int o = __offset(62); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat2Percent() { int o = __offset(64); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int stat3Percent() { int o = __offset(66); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int gigantamaxPower() { int o = __offset(68); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
   public boolean flagMakesContact() { int o = __offset(70); return o != 0 ? 0!=bb.get(o + bb_pos) : false; }
   public boolean flagCharge() { int o = __offset(72); return o != 0 ? 0!=bb.get(o + bb_pos) : false; }
   public boolean flagRecharge() { int o = __offset(74); return o != 0 ? 0!=bb.get(o + bb_pos) : false; }
@@ -71,36 +71,36 @@ public final class SwShMove extends Table {
       long version,
       long move_id,
       boolean can_use_move,
-      byte type,
-      byte quality,
-      byte category,
-      byte power,
-      byte accuracy,
-      byte pp,
-      byte priority,
-      byte hit_min,
-      byte hit_max,
+      int type,
+      int quality,
+      int category,
+      int power,
+      int accuracy,
+      int pp,
+      int priority,
+      int hit_min,
+      int hit_max,
       int inflict,
-      byte inflict_percent,
-      byte raw_inflict_count,
-      byte turn_min,
-      byte turn_max,
-      byte crit_stage,
-      byte flinch,
+      int inflict_percent,
+      int raw_inflict_count,
+      int turn_min,
+      int turn_max,
+      int crit_stage,
+      int flinch,
       int effect_sequence,
-      byte recoil,
-      byte raw_healing,
-      byte raw_target,
-      byte stat1,
-      byte stat2,
-      byte stat3,
-      byte stat1_stage,
-      byte stat2_stage,
-      byte stat3_stage,
-      byte stat1_percent,
-      byte stat2_percent,
-      byte stat3_percent,
-      byte gigantamax_power,
+      int recoil,
+      int raw_healing,
+      int raw_target,
+      int stat1,
+      int stat2,
+      int stat3,
+      int stat1_stage,
+      int stat2_stage,
+      int stat3_stage,
+      int stat1_percent,
+      int stat2_percent,
+      int stat3_percent,
+      int gigantamax_power,
       boolean flag_makes_contact,
       boolean flag_charge,
       boolean flag_recharge,
@@ -178,36 +178,36 @@ public final class SwShMove extends Table {
   public static void addVersion(FlatBufferBuilder builder, long version) { builder.addInt(0, (int)version, (int)0L); }
   public static void addMoveId(FlatBufferBuilder builder, long moveId) { builder.addInt(1, (int)moveId, (int)0L); }
   public static void addCanUseMove(FlatBufferBuilder builder, boolean canUseMove) { builder.addBoolean(2, canUseMove, false); }
-  public static void addType(FlatBufferBuilder builder, byte type) { builder.addByte(3, type, 0); }
-  public static void addQuality(FlatBufferBuilder builder, byte quality) { builder.addByte(4, quality, 0); }
-  public static void addCategory(FlatBufferBuilder builder, byte category) { builder.addByte(5, category, 0); }
-  public static void addPower(FlatBufferBuilder builder, byte power) { builder.addByte(6, power, 0); }
-  public static void addAccuracy(FlatBufferBuilder builder, byte accuracy) { builder.addByte(7, accuracy, 0); }
-  public static void addPp(FlatBufferBuilder builder, byte pp) { builder.addByte(8, pp, 0); }
-  public static void addPriority(FlatBufferBuilder builder, byte priority) { builder.addByte(9, priority, 0); }
-  public static void addHitMin(FlatBufferBuilder builder, byte hitMin) { builder.addByte(10, hitMin, 0); }
-  public static void addHitMax(FlatBufferBuilder builder, byte hitMax) { builder.addByte(11, hitMax, 0); }
+  public static void addType(FlatBufferBuilder builder, int type) { builder.addByte(3, (byte)type, (byte)0); }
+  public static void addQuality(FlatBufferBuilder builder, int quality) { builder.addByte(4, (byte)quality, (byte)0); }
+  public static void addCategory(FlatBufferBuilder builder, int category) { builder.addByte(5, (byte)category, (byte)0); }
+  public static void addPower(FlatBufferBuilder builder, int power) { builder.addByte(6, (byte)power, (byte)0); }
+  public static void addAccuracy(FlatBufferBuilder builder, int accuracy) { builder.addByte(7, (byte)accuracy, (byte)0); }
+  public static void addPp(FlatBufferBuilder builder, int pp) { builder.addByte(8, (byte)pp, (byte)0); }
+  public static void addPriority(FlatBufferBuilder builder, int priority) { builder.addByte(9, (byte)priority, (byte)0); }
+  public static void addHitMin(FlatBufferBuilder builder, int hitMin) { builder.addByte(10, (byte)hitMin, (byte)0); }
+  public static void addHitMax(FlatBufferBuilder builder, int hitMax) { builder.addByte(11, (byte)hitMax, (byte)0); }
   public static void addInflict(FlatBufferBuilder builder, int inflict) { builder.addShort(12, (short)inflict, (short)0); }
-  public static void addInflictPercent(FlatBufferBuilder builder, byte inflictPercent) { builder.addByte(13, inflictPercent, 0); }
-  public static void addRawInflictCount(FlatBufferBuilder builder, byte rawInflictCount) { builder.addByte(14, rawInflictCount, 0); }
-  public static void addTurnMin(FlatBufferBuilder builder, byte turnMin) { builder.addByte(15, turnMin, 0); }
-  public static void addTurnMax(FlatBufferBuilder builder, byte turnMax) { builder.addByte(16, turnMax, 0); }
-  public static void addCritStage(FlatBufferBuilder builder, byte critStage) { builder.addByte(17, critStage, 0); }
-  public static void addFlinch(FlatBufferBuilder builder, byte flinch) { builder.addByte(18, flinch, 0); }
+  public static void addInflictPercent(FlatBufferBuilder builder, int inflictPercent) { builder.addByte(13, (byte)inflictPercent, (byte)0); }
+  public static void addRawInflictCount(FlatBufferBuilder builder, int rawInflictCount) { builder.addByte(14, (byte)rawInflictCount, (byte)0); }
+  public static void addTurnMin(FlatBufferBuilder builder, int turnMin) { builder.addByte(15, (byte)turnMin, (byte)0); }
+  public static void addTurnMax(FlatBufferBuilder builder, int turnMax) { builder.addByte(16, (byte)turnMax, (byte)0); }
+  public static void addCritStage(FlatBufferBuilder builder, int critStage) { builder.addByte(17, (byte)critStage, (byte)0); }
+  public static void addFlinch(FlatBufferBuilder builder, int flinch) { builder.addByte(18, (byte)flinch, (byte)0); }
   public static void addEffectSequence(FlatBufferBuilder builder, int effectSequence) { builder.addShort(19, (short)effectSequence, (short)0); }
-  public static void addRecoil(FlatBufferBuilder builder, byte recoil) { builder.addByte(20, recoil, 0); }
-  public static void addRawHealing(FlatBufferBuilder builder, byte rawHealing) { builder.addByte(21, rawHealing, 0); }
-  public static void addRawTarget(FlatBufferBuilder builder, byte rawTarget) { builder.addByte(22, rawTarget, 0); }
-  public static void addStat1(FlatBufferBuilder builder, byte stat1) { builder.addByte(23, stat1, 0); }
-  public static void addStat2(FlatBufferBuilder builder, byte stat2) { builder.addByte(24, stat2, 0); }
-  public static void addStat3(FlatBufferBuilder builder, byte stat3) { builder.addByte(25, stat3, 0); }
-  public static void addStat1Stage(FlatBufferBuilder builder, byte stat1Stage) { builder.addByte(26, stat1Stage, 0); }
-  public static void addStat2Stage(FlatBufferBuilder builder, byte stat2Stage) { builder.addByte(27, stat2Stage, 0); }
-  public static void addStat3Stage(FlatBufferBuilder builder, byte stat3Stage) { builder.addByte(28, stat3Stage, 0); }
-  public static void addStat1Percent(FlatBufferBuilder builder, byte stat1Percent) { builder.addByte(29, stat1Percent, 0); }
-  public static void addStat2Percent(FlatBufferBuilder builder, byte stat2Percent) { builder.addByte(30, stat2Percent, 0); }
-  public static void addStat3Percent(FlatBufferBuilder builder, byte stat3Percent) { builder.addByte(31, stat3Percent, 0); }
-  public static void addGigantamaxPower(FlatBufferBuilder builder, byte gigantamaxPower) { builder.addByte(32, gigantamaxPower, 0); }
+  public static void addRecoil(FlatBufferBuilder builder, int recoil) { builder.addByte(20, (byte)recoil, (byte)0); }
+  public static void addRawHealing(FlatBufferBuilder builder, int rawHealing) { builder.addByte(21, (byte)rawHealing, (byte)0); }
+  public static void addRawTarget(FlatBufferBuilder builder, int rawTarget) { builder.addByte(22, (byte)rawTarget, (byte)0); }
+  public static void addStat1(FlatBufferBuilder builder, int stat1) { builder.addByte(23, (byte)stat1, (byte)0); }
+  public static void addStat2(FlatBufferBuilder builder, int stat2) { builder.addByte(24, (byte)stat2, (byte)0); }
+  public static void addStat3(FlatBufferBuilder builder, int stat3) { builder.addByte(25, (byte)stat3, (byte)0); }
+  public static void addStat1Stage(FlatBufferBuilder builder, int stat1Stage) { builder.addByte(26, (byte)stat1Stage, (byte)0); }
+  public static void addStat2Stage(FlatBufferBuilder builder, int stat2Stage) { builder.addByte(27, (byte)stat2Stage, (byte)0); }
+  public static void addStat3Stage(FlatBufferBuilder builder, int stat3Stage) { builder.addByte(28, (byte)stat3Stage, (byte)0); }
+  public static void addStat1Percent(FlatBufferBuilder builder, int stat1Percent) { builder.addByte(29, (byte)stat1Percent, (byte)0); }
+  public static void addStat2Percent(FlatBufferBuilder builder, int stat2Percent) { builder.addByte(30, (byte)stat2Percent, (byte)0); }
+  public static void addStat3Percent(FlatBufferBuilder builder, int stat3Percent) { builder.addByte(31, (byte)stat3Percent, (byte)0); }
+  public static void addGigantamaxPower(FlatBufferBuilder builder, int gigantamaxPower) { builder.addByte(32, (byte)gigantamaxPower, (byte)0); }
   public static void addFlagMakesContact(FlatBufferBuilder builder, boolean flagMakesContact) { builder.addBoolean(33, flagMakesContact, false); }
   public static void addFlagCharge(FlatBufferBuilder builder, boolean flagCharge) { builder.addBoolean(34, flagCharge, false); }
   public static void addFlagRecharge(FlatBufferBuilder builder, boolean flagRecharge) { builder.addBoolean(35, flagRecharge, false); }

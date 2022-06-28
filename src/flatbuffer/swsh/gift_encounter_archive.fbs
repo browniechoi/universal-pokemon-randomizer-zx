@@ -1,0 +1,38 @@
+namespace com.dabomstew.pkrandom.generated.swsh;
+
+table SwShGiftEncounterArchive {
+    gift_encounters:[SwShGiftEncounter];
+}
+
+table SwShGiftEncounter {
+    is_egg:int;
+    form:ubyte;
+    dynamax_level:ubyte;
+    ball_item_id:int;
+    field_04:ubyte;
+    hash1:ulong;
+    can_gigantamax:bool;
+    held_item:int;
+    level:ubyte;
+    species:int;
+    field_0a:ubyte;
+    memory_code:ubyte;
+    memory_data:ushort;
+    memory_feel:ubyte;
+    memory_level:ubyte;
+    ot_name_id:ulong;
+    ot_gender:int;
+    shiny_lock:int;
+    nature:int;
+    gender:ubyte;
+    iv_spe:byte;
+    iv_atk:byte;
+    iv_def:byte;
+    iv_hp:byte;
+    iv_spa:byte;
+    iv_spd:byte;
+    ability:int;
+    special_move:int;
+}
+
+root_type SwShGiftEncounterArchive;

@@ -1,0 +1,45 @@
+namespace com.dabomstew.pkrandom.generated.swsh;
+
+table SwShTradeEncounterArchive {
+    trade_encounters:[SwShTradeEncounter];
+}
+
+table SwShTradeEncounter {
+    form:ubyte;
+    dynamax_level:ubyte;
+    ball_item_id:int;
+    field_03:int;
+    hash0:ulong;
+    can_gigantamax:bool;
+    held_item:int;
+    level:ubyte;
+    species:int;
+    hash1:ulong;
+    trainer_id:int;
+    memory:ubyte;
+    text_var:ushort;
+    feeling:ubyte;
+    intensity:ubyte;
+    hash2:ulong;
+    ot_gender:ubyte;
+    required_form:ubyte;
+    required_species:int;
+    required_nature:int;
+    unknown_requirement:ubyte;
+    shiny_lock:int;
+    nature:int;
+    gender:ubyte;
+    iv_spe:byte;
+    iv_atk:byte;
+    iv_def:byte;
+    iv_hp:byte;
+    iv_spa:byte;
+    iv_spd:byte;
+    ability_number:ubyte;
+    relearn1:ushort;
+    relearn2:ushort;
+    relearn3:ushort;
+    relearn4:ushort;
+}
+
+root_type SwShTradeEncounterArchive;
