@@ -27,8 +27,10 @@ package com.dabomstew.pkrandom.romhandlers;
 
 import com.dabomstew.pkrandom.exceptions.RandomizerIOException;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.io.RandomAccessFile;
 import java.util.Random;
 
 public abstract class AbstractSwitchRomHandler extends AbstractRomHandler {
@@ -44,8 +46,8 @@ public abstract class AbstractSwitchRomHandler extends AbstractRomHandler {
         if (!this.detectSwitchGame(filename)) {
             return false;
         }
-        this.loadedROM(filename);
         loadedFN = filename;
+        this.loadedROM(filename);
         return true;
     }
 
@@ -114,5 +116,22 @@ public abstract class AbstractSwitchRomHandler extends AbstractRomHandler {
         // Default value for Gen4+.
         // Handlers can override again in case of ROM hacks etc.
         return true;
+    }
+
+    // Doesn't decompress this for now, so you're on you're own.
+    protected byte[] readMain() throws IOException {
+        String mainPath = loadedFN + File.separator + "exefs" + File.separator + "main";
+        RandomAccessFile mainFile = new RandomAccessFile(mainPath, "r");
+        byte[] main = new byte[(int)mainFile.length()];
+        mainFile.readFully(main);
+        return main;
+    }
+
+    protected byte[] readFile(String location) throws IOException {
+        String filePath = loadedFN + File.separator + "romfs" + File.separator + location;
+        RandomAccessFile randomAccessFile = new RandomAccessFile(filePath, "r");
+        byte[] file = new byte[(int)randomAccessFile.length()];
+        randomAccessFile.readFully(file);
+        return file;
     }
 }

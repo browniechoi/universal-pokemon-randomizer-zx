@@ -1,6 +1,7 @@
 package com.dabomstew.pkrandom.romhandlers;
 
 import com.dabomstew.pkrandom.Settings;
+import com.dabomstew.pkrandom.exceptions.RandomizerIOException;
 import com.dabomstew.pkrandom.pokemon.*;
 
 import java.awt.image.BufferedImage;
@@ -536,7 +537,12 @@ public class SwShRomHandler extends AbstractSwitchRomHandler {
 
     @Override
     protected void loadedROM(String filename) {
-
+        try {
+            byte[] main = this.readMain();
+            byte[] test = this.readFile("bin/appli/autosave/bin/autosave_00.arc");
+        } catch (IOException e) {
+            throw new RandomizerIOException(e);
+        }
     }
 
     @Override
