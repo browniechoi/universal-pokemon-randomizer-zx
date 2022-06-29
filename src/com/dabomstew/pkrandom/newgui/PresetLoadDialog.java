@@ -267,7 +267,7 @@ public class PresetLoadDialog extends JDialog {
         int returnVal = romFileChooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             final File fh = romFileChooser.getSelectedFile();
-            for (RomHandler.Factory rhf : parentGUI.checkHandlers) {
+            for (RomHandler.Factory rhf : parentGUI.checkRomHandlers) {
                 if (rhf.isLoadable(fh.getAbsolutePath())) {
                     final RomHandler checkHandler = rhf.create(RandomSource.instance());
                     if (!NewRandomizerGUI.usedLauncher && checkHandler instanceof Abstract3DSRomHandler) {

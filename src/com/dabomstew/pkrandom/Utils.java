@@ -73,6 +73,23 @@ public class Utils {
         }
     }
 
+    public static void validateExtractedDirectory(File fh) throws InvalidExtractedDirectoryException {
+        String exefsPath = fh.getAbsolutePath() + File.separator + "exefs";
+        String romfsPath = fh.getAbsolutePath() + File.separator + "romfs";
+        File exefsDir = new File(exefsPath);
+        File romfsDir = new File(romfsPath);
+        if (!exefsDir.exists() || !exefsDir.isDirectory() || !romfsDir.exists() || !romfsDir.isDirectory()) {
+            throw new InvalidExtractedDirectoryException(InvalidExtractedDirectoryException.Type.MISSING_DIRECTORIES,
+                    String.format("%s doesn't look like an extracted Switch game directory; it's missing exefs and/or romfs directories", fh.getName()));
+        }
+        String mainPath = exefsPath + File.separator + "main";
+        File mainFile = new File(mainPath);
+        if (!mainFile.exists() || !mainFile.isFile()) {
+            throw new InvalidExtractedDirectoryException(InvalidExtractedDirectoryException.Type.NO_EXECUTABLE,
+                    String.format("%s doesn't look like an extracted Switch game directory; it's missing exefs/main", fh.getName()));
+        }
+    }
+
     // RomHandlers implicitly rely on these - call this before creating settings
     // etc.
     public static void testForRequiredConfigs() throws FileNotFoundException {
@@ -140,6 +157,24 @@ public class Utils {
         }
 
         public Type getType() {
+            return type;
+        }
+    }
+
+    public static class InvalidExtractedDirectoryException extends Exception {
+
+        public enum Type {
+            MISSING_DIRECTORIES, NO_EXECUTABLE
+        }
+
+        private final InvalidExtractedDirectoryException.Type type;
+
+        public InvalidExtractedDirectoryException(InvalidExtractedDirectoryException.Type type, String message) {
+            super(message);
+            this.type = type;
+        }
+
+        public InvalidExtractedDirectoryException.Type getType() {
             return type;
         }
     }
